@@ -1,6 +1,22 @@
 def heapsort(arr):
- pass 
- 
+  # Successful Attempt
+  heap = Heap()
+  new_list = [0] * len(arr)
+  for num in arr:
+    heap.insert(num)
+  for i in range(len(arr)-1, 0, -1):
+    new_list[i] = heap.delete()
+  return new_list
+
+  # First Attempt
+  # heap = Heap()
+  # new_list = []
+  # length = len(arr)
+  # for num in arr:
+  #   heap.insert(num)
+  # for i in range(len(arr)):
+  #   new_list[i] = heap.delete()
+  # new_list.reverse()
 
 class Heap:
   def __init__(self):
